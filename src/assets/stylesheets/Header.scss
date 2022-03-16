@@ -1,0 +1,70 @@
+@import 'Variables';
+
+.header {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+
+    &__logo {
+        width: 100px;
+        height: 90px;
+    }
+
+    &__btn {
+        appearance: none;
+        border: none;
+        background: transparent;
+
+        &__icon {
+            line {
+                stroke: $primary-color;
+            }
+        }
+    }
+
+    &__modal {
+        position: absolute;
+        right: 50px;
+        bottom: 41px;
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            overflow-y: hidden;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            @include secondary-title($paragraph, $text-color);
+            transform: translate(0, 130px);
+            opacity: 0;
+            margin: 0 2rem 0 0;
+        }
+    }
+
+    @include small-screen {
+        &__logo {
+            width: 80px;
+            height: 70px;
+        }
+
+        &__modal {
+            right: 25px;
+
+            li {
+                margin: 0 1rem 0 0;
+            }
+        }
+    }
+
+    @include large-screen {
+        width: 1140px;
+    }
+}

@@ -1,0 +1,155 @@
+@import 'Variables';
+
+.info {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% 15% 30%;
+
+    &__title {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    &__text1 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    &__text2 {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        display: inherit;
+
+        p {
+            text-align: right;
+            justify-self: end;
+        }
+    }
+
+    &__ghe {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        display: inherit;
+
+        p {
+            text-align: left;
+        }
+
+        img {
+            align-self: center;
+            width: 18%;
+        }
+    }
+
+    &__weber {
+        grid-row: 3/4;
+        grid-column: 2/3;
+        display: inherit;
+
+        p {
+            text-align: right;
+            align-self: end;
+            justify-self: end;
+        }
+
+        a {
+            width: 180px;
+            justify-self: end;
+            align-self: center;
+            cursor: pointer;
+        }
+    }
+
+    h1,
+    p {
+        width: 65%;
+    }
+
+    h1 {
+        @include primary-title($header2, $primary-color);
+        align-self: center;
+    }
+
+    p {
+        @include secondary-title($paragraph, $text-color);
+    }
+
+    @include small-screen {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20%;
+
+        &__title {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+
+        &__text1 {
+            grid-row: 2/3;
+            grid-column: 1/2;
+            align-self: start;
+        }
+
+        &__text2 {
+            grid-row: 3/4;
+            grid-column: 1/2;
+            align-self: start;
+
+            p {
+                text-align: left;
+            }
+        }
+
+        &__ghe {
+            grid-row: 4/5;
+            grid-column: 1/2;
+            align-self: start;
+
+            img {
+                display: none;
+            }
+        }
+
+        &__weber {
+            grid-row: 5/6;
+            grid-column: 1/2;
+            align-self: start;
+
+            p {
+                text-align: left;
+            }
+
+            a {
+                width: 120px;
+                margin: 1rem 0 1rem 0;
+            }
+        }
+
+        h1,
+        p {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: $header4;
+        }
+
+    }
+
+    @include medium-screen {
+        h1,
+        p {
+            width: 80%;
+        }
+    }
+
+    @include large-screen {
+        width: 1140px;
+    }
+}

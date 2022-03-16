@@ -1,0 +1,71 @@
+@import 'Variables';
+
+.fb {
+    width: 80%;
+    height: calc(50vh - 100px);
+    margin: 0 auto;
+    
+    &__text {
+        @include grid(3fr 1fr);
+        overflow-y: hidden;
+        height: 100%;
+
+        &__title {
+            @include primary-title($header1, $primary-color);
+            width: 80%;
+            justify-self: start;
+        }
+        
+        &__subtitle {
+            @include secondary-title($header5, $text-color);
+            width: 80%;
+            justify-self: end;
+            text-align: end;
+        } 
+    }
+
+    @include small-screen {
+        height: calc(60vh - 100px);
+
+        &__text {
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            overflow-y: hidden;
+
+            &__title {
+                width: 100%;
+                font-size: $header3;
+                grid-column: 1/3;
+                grid-row: 1/2;
+            }
+            
+            &__subtitle {
+                width: 100%;
+                font-size: $paragraph;
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+        } 
+
+        &__banner {
+            height: 35vh;
+        }
+    }
+
+    @include medium-screen {
+        &__text {
+            &__title {
+                font-size: $header2;
+            }
+    
+            &__subtitle {
+                font-size: $paragraph;
+            }
+        }
+    }
+    
+    @include large-screen {
+        width: 1140px;
+    }
+    
+}

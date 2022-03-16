@@ -1,0 +1,66 @@
+// Colors
+$primary-color: hsl(232, 45%, 44%);
+$secondary-color: hsl(133, 100%, 37%);
+$text-color: hsl(0, 0%, 0%);
+$text-color-contrast: hsl(0, 0%, 100%);
+
+// TypeScale
+$header1: 4.209rem;
+$header2: 3.157rem;
+$header3: 2.369rem;
+$header4: 1.777rem;
+$header5: 1.333rem;
+$paragraph: 1rem;
+$primary-font: 'Optician Sans', monospace;
+$secondary-font: 'Manrope', sans-serif;
+
+// Mixins
+@mixin global-style {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    overscroll-behavior: none;
+}
+
+@mixin primary-title($size, $color) {
+    font-size: $size;
+    font-family: $primary-font;
+    color: $color;
+    font-weight: 300;
+}
+
+@mixin secondary-title($size, $color) {
+    font-size: $size;
+    font-family: $secondary-font;
+    color: $color;
+}
+
+@mixin grid($columns) {
+    display: grid;
+    grid-template-columns: $columns;
+    place-items: center;
+}
+
+// Media Querys
+@mixin small-screen {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin medium-screen {
+    @media (min-width: 768px) and (max-width: 990px) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+

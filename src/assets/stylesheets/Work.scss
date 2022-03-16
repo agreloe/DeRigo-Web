@@ -1,0 +1,127 @@
+@import "Variables";
+
+.work {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+
+  &__about {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8rem 0;
+    overflow-y: hidden;
+
+    p {
+      @include secondary-title($paragraph, $text-color-contrast);
+    }
+
+    &__title {
+      width: 70%;
+      overflow-y: hidden;
+
+      h1 {
+        @include primary-title($header2, $text-color-contrast);
+        margin: 1rem 0 0 0;
+      }
+    }
+
+    &__subtitle {
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+      align-items: center;
+    }
+  }
+
+  &__photos {
+    @include grid(1fr 1fr);
+    width: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem 1rem;
+
+      &__img {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+      }
+
+      &__text {
+        @include secondary-title($paragraph, $text-color-contrast);
+        width: 75%;
+        text-align: left;
+        justify-self: left;
+
+        span {
+          @include primary-title($header5, $text-color-contrast);
+          display: block;
+        }
+
+        &:nth-of-type(odd) {
+          text-align: right;
+          justify-self: end;
+        }
+      }
+  }
+
+  @include small-screen {
+    &__about {
+
+      &__title {
+        width: 100%;
+
+        h1 {
+          font-size: $header4;
+        }
+      }
+
+      &__subtitle {
+        display: none;
+      }
+    }
+
+    &__photos {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 1fr);
+
+      &__img  {
+        height: 200px;
+      }
+      .first {
+        grid-row: 1/2;
+      }
+      .second {
+        grid-row: 3/4;
+      }
+      .third {
+        grid-row: 5/6;
+      }
+      .fourth {
+        grid-row: 7/8;
+      }
+    }
+
+  }
+
+  @include medium-screen {
+    &__photos {
+      &__img {
+        height: 300px;
+      }
+    }
+  }
+
+
+  @include large-screen {
+    width: 1140px;
+  }
+}
