@@ -36,7 +36,6 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: "http://localhost:8080/"
     },
-    plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
         static: path.resolve(__dirname, './public'),
         hot: true,

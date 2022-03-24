@@ -36,7 +36,7 @@ module.exports = {
         path: path.resolve(__dirname, './public'),
         filename: 'bundle.js',
     },
-    plugins: [new webpack.HotModuleReplacementPlugin(), new MiniCssExtractPlugin()],
+    plugins: [new MiniCssExtractPlugin()],
     devServer: {
         static: path.resolve(__dirname, './public')
     },
