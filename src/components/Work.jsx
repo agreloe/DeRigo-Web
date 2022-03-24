@@ -102,7 +102,7 @@ const Work = () => {
         </div>
       </div>
       <div className="work__photos">
-        <div className="work__photos__img first" onMouseOver={onEnter1} onMouseLeave={onEnter1} style={show1 == false ? {backgroundImage: `url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2014-la-anonima-10_Rc3Tap7ch8V.jpg')`, transition: `500ms`} : {backgroundImage: `url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2012-wallmart-moreno-5_lFjv-SvPK5d.jpg')`, transition: `500ms`}}></div>
+        <div className="work__photos__img first" onMouseOver={onEnter1} onMouseLeave={onEnter1} style={show1 == false ? {backgroundImage: `url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/DSC_0118__1__YvF1TyJXKV.jpg')`, transition: `500ms`} : {backgroundImage: `url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2014-la-anonima-10_Rc3Tap7ch8V.jpg')`, transition: `500ms`}}></div>
         <p className="work__photos__text"><span>La Anónima - Centro de Distribución Robotizado</span>Instalación de 8 Compresores a Tornillo Bitzer Serie HS-85 con Potencia de 1045 Hp. Sistema Green High Efficiency.</p>
         <p className="work__photos__text"><span>Dia% - Centro de Distribución</span>Instalación de 8 Compresores a Tornillo Bitzer Serie HS-74 con Potencia de 600 Hp.</p>
         <div className="work__photos__img second" onMouseOver={onEnter2} onMouseLeave={onEnter2} style={show2 == false ? {backgroundImage: `url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/dia-centrodedistribucion-2_zTJGN_NK-nfr.jpg')`, transition: `500ms`} : {backgroundImage: `url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/dia-centrodedistribucion-1_degPqnhFwEKL.jpg')`, transition: `500ms`}}></div>

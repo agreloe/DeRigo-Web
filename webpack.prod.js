@@ -38,7 +38,6 @@ module.exports = {
     },
     plugins: [new webpack.HotModuleReplacementPlugin(), new MiniCssExtractPlugin()],
     devServer: {
-        static: path.resolve(__dirname, './public'),
-        hot: true,
+        static: path.resolve(__dirname, './public')
     },
 };

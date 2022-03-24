@@ -113,8 +113,18 @@ const Header = () => {
       </button>
       <div className="header__modal">
         <ul>
-          <li className="menu-home">Home</li>
-          <li className="menu-work">Work</li>
+          <li className="menu-home"
+          onClick={() => {
+            const anchor = document.querySelector('#contact')
+            anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+          }}>Contact</li>
+          <li
+          className="menu-work"
+          onClick={() => {
+            const anchor = document.querySelector('#work')
+            anchor.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }}
+          >Work</li>
         </ul>
       </div>
     </header>

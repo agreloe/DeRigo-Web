@@ -38,11 +38,11 @@ const Home = () => {
           <Info />
         </section>
 
-        <section ref={workSection} className='home__container'>
+        <section id='work' ref={workSection} className='home__container'>
           <Work />
         </section>
 
-        <section className='home__container'>
+        <section id='contact' className='home__container'>
           <Contact />
           <Footer />
         </section>
