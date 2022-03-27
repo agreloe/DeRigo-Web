@@ -26,7 +26,7 @@ const FirstBlock = () => {
   return (
     <div className="fb" ref={el}>
       <div className="fb__text">
-        <h1 className="fb__text__title fbText">Soluciones en frío</h1>
+        <h1 className="fb__text__title fbText">Soluciones en frio</h1>
         <p className="fb__text__subtitle fbText">
           Con el mayor ahorro energético y la mejor tecnología en frío
         </p>
