@@ -102,7 +102,7 @@ const Contact = () => {
       <div className="contact__title">
         <p className="contact__title__subtitle">Contactanos</p>
         <h1 className="contact__title__title">
-          Ideamos la mejor solucion en frio para tu proyecto.
+          Ideamos la mejor solución en frío para tu proyecto.
         </h1>
       </div>
 
