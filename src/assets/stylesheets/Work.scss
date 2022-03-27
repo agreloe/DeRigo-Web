@@ -59,30 +59,30 @@
         background-image: url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/DSC_0118__1__YvF1TyJXKV.jpg');
         transition: 500ms;
       }
-      .first:hover {
+      /* .first:hover {
         background-image: url("https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2014-la-anonima-10_Rc3Tap7ch8V.jpg");
-      }
+      } */
       .second {
         background-image: url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/proyect-2018_-Hni4huDoc.jpg');
         transition: 500ms;
       }
-      .second:hover {
+      /* .second:hover {
         background-image: url("https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/dia-centrodedistribucion-1_degPqnhFwEKL.jpg");
-      }
+      } */
       .third {
         background-image: url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2012-wallmart-moreno-1_lXhdnQrQ2OI0j.jpg');
         transition: 500ms;
       }
-      .third:hover {
+      /* .third:hover {
         background-image: url("https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2012-wallmart-moreno-5_lFjv-SvPK5d.jpg");
-      }
+      } */
       .fourth {
         background-image: url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/wallmart-cordoba-1_sB9UGSJvQYkzg.jpg');
         transition: 500ms;
       }
-      .fourth:hover {
+      /* .fourth:hover {
         background-image: url("https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/wallmart-cordoba-2.jpg");
-      }
+      } */
 
       &__text {
         @include secondary-title($paragraph, $text-color-contrast);
