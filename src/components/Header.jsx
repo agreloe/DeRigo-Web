@@ -117,14 +117,14 @@ const Header = () => {
           onClick={() => {
             const anchor = document.querySelector('#contact')
             anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
-          }}>Contact</li>
+          }}>Contacto</li>
           <li
           className="menu-work"
           onClick={() => {
             const anchor = document.querySelector('#work')
             anchor.scrollIntoView({ behavior: 'smooth', block: 'start' })
           }}
-          >Work</li>
+          >Trabajo</li>
         </ul>
       </div>
     </header>
