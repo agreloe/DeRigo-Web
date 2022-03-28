@@ -64,3 +64,9 @@ $secondary-font: 'Manrope', sans-serif;
     }
 }
 
+@mixin xl-screen {
+    @media (min-width: 1921px) {
+        @content;
+    }
+}
+
