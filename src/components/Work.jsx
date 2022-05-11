@@ -25,9 +25,22 @@ const Work = () => {
       ease: Power3.easeOut,
     });
 
-    gsap.utils.toArray(".work__photos__img").forEach(photo => {
+    gsap.utils.toArray(".fourth, .second").forEach(photo => {
       gsap.from(photo, {
-        y: 130,
+        x: 50,
+        opacity: 0,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: photo,
+          start: 'top bottom',
+          end: 'bottom 40%',
+          toggleActions: toggleActions,
+        }
+      });
+    })
+    gsap.utils.toArray(".first, .third").forEach(photo => {
+      gsap.from(photo, {
+        x: -50,
         opacity: 0,
         ease: Power3.easeOut,
         scrollTrigger: {
@@ -41,15 +54,16 @@ const Work = () => {
 
     gsap.utils.toArray(".work__photos__text").forEach(text => {
       gsap.from(text, {
-        y: 130,
+        y: 25,
         opacity: 0,
         duration: 0.6,
         ease: Power3.easeOut,
         scrollTrigger: {
           trigger: text,
           start: 'top bottom',
-          end: 'bottom 40%',
+          end: 'bottom 30%',
           toggleActions: toggleActions,
+          
         }
       });
     })
