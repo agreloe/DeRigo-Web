@@ -11,7 +11,7 @@ const Info = () => {
   gsap.registerPlugin(ScrollTrigger);
   const tl = React.useRef();
 
-  React.useEffect(() => {
+  /* React.useEffect(() => {
     gsap.defaults({ duration: 0.5 });
     tl.current = gsap
       .timeline()
@@ -27,6 +27,7 @@ const Info = () => {
         start: "top 50%",
         end: "bottom top",
         animation: tl.current,
+        markers:true,
         onEnter: () => {
           tl.current.play();
 
@@ -44,7 +45,7 @@ const Info = () => {
 
         },
       });
-  },[])
+  },[]) */
 
   return (
       <div className='info' ref={infoRef}>
