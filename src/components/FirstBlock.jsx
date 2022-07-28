@@ -18,7 +18,7 @@ const FirstBlock = () => {
       },
       duration: 0.7,
       opacity: 0,
-      y: 130,
+      y: 50,
       ease: Power3.easeOut,
     });
   }, []);

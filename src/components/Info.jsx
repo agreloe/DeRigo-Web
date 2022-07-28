@@ -11,13 +11,13 @@ const Info = () => {
   gsap.registerPlugin(ScrollTrigger);
   const tl = React.useRef();
 
-  /* React.useEffect(() => {
+  React.useEffect(() => {
     gsap.defaults({ duration: 0.5 });
     tl.current = gsap
       .timeline()
-      .from(q(".info__col"), {
+      .from(q("li"), {
         opacity: 0,
-        y: 130,
+        x: 50,
         stagger: 0.2,
         ease: Power3.easeOut,
       })
@@ -25,9 +25,9 @@ const Info = () => {
       ScrollTrigger.create({
         trigger: infoRef.current,
         start: "top 50%",
-        end: "bottom top",
+        end: "bottom 50%",
         animation: tl.current,
-        markers:true,
+        //markers:true,
         onEnter: () => {
           tl.current.play();
 
@@ -45,7 +45,7 @@ const Info = () => {
 
         },
       });
-  },[]) */
+  },[])
 
   return (
       <div className='info' ref={infoRef}>
@@ -53,7 +53,13 @@ const Info = () => {
           <p>Nuestra trayectoria</p>
           <h2>Sobre nosotros</h2>
         </div>
-        <div className='info__col first'>
+        <ul className='info__text'>
+          <li>Con más de 40 años de experiencia en instalaciones Frigoríficas, estamos ubicados en el primer lugar en Argentina en lo que se refiere a ejecución de Obras con compresores a Tornillo.</li>
+          <li>Hemos llevado a cabo la Ingeniería, Instalación y Puesta en Marcha de los más importantes Centros de Distribución del país.</li>
+          <li>Trabajamos con tecnologías Green High Efficiency basadas en la aplicación de estrategias de ahorro energético como Low Condensing y Hot Gas Defrost, con las cuales hemos logrado un ahorro de energía de más del 30%.</li>
+          <li>Contamos con la respresentación oficial en Argentina de <a href="https://webercooling.com/en/" rel='noreferer' target="_blank">Weber Cooling</a>, empresa de los Países Bajos dedicada a la fabricación de cámaras de enfriamiento al vacío.</li>
+        </ul>
+        {/* <div className='info__col first'>
           <img src={snowflake} alt="Icono de copo de nieve" />
           <p>Con más de 40 años de experiencia en instalaciones Frigoríficas, estamos ubicados en el primer lugar en Argentina en lo que se refiere a ejecución de Obras con compresores a Tornillo.</p>
         </div>
@@ -71,7 +77,7 @@ const Info = () => {
           <a href="https://webercooling.com/en/" rel='noreferer' target="_blank">
             <img className='info__col__weber' src={weberLogo} alt='logo de la empresa Weber Cooling' />
           </a>
-        </div>
+        </div> */}
       </div>
   )
 }

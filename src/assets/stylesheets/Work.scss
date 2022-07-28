@@ -12,11 +12,11 @@
 
   &__about {
     width: 100%;
-    height: 20vh;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 8rem 0;
+    padding: 4rem 0;
     overflow-y: hidden;
 
     p {
@@ -38,67 +38,98 @@
       flex-direction: column;
       margin-top: auto;
       align-items: center;
+
+      &::after {
+        content: url('https://img.icons8.com/ios/50/ffffff/long-arrow-down.png');
+        width: 40px;
+        height: auto;
+        margin: 1rem 0;
+      }
     }
+
   }
 
   &__photos {
     @include grid(1fr 1fr);
     width: 100%;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 2rem 1rem;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    //padding: 2rem 0;
+    margin: 0 0 8rem 0;
 
       &__img {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
         width: 100%;
-        height: 400px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .first {
         background-image: url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/DSC_0118__1__YvF1TyJXKV.jpg');
-        transition: 500ms;
+
       }
-      /* .first:hover {
-        background-image: url("https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2014-la-anonima-10_Rc3Tap7ch8V.jpg");
-      } */
+
+      .first:hover &__text {
+        opacity: 1;
+      }
+
       .second {
         background-image: url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/proyect-2018_-Hni4huDoc.jpg');
-        transition: 500ms;
       }
-      /* .second:hover {
-        background-image: url("https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/dia-centrodedistribucion-1_degPqnhFwEKL.jpg");
-      } */
+
+      .second:hover &__text {
+        opacity: 1;
+      }
+
       .third {
         background-image: url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2012-wallmart-moreno-1_lXhdnQrQ2OI0j.jpg');
-        transition: 500ms;
       }
-      /* .third:hover {
-        background-image: url("https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2012-wallmart-moreno-5_lFjv-SvPK5d.jpg");
-      } */
+
+      .third:hover &__text {
+        opacity: 1;
+      }
+
       .fourth {
         background-image: url('https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/wallmart-cordoba-1_sB9UGSJvQYkzg.jpg');
-        transition: 500ms;
+
       }
-      /* .fourth:hover {
-        background-image: url("https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/wallmart-cordoba-2.jpg");
-      } */
+
+      .fourth:hover &__text {
+        opacity: 1;
+      }
 
       &__text {
-        @include secondary-title($paragraph, $text-color-contrast);
+        @include secondary-title($paragraph,$text-color-contrast);
         width: 75%;
-        text-align: left;
-        justify-self: left;
+        height: 30%;
+        text-align: center;
+        padding: 2rem;
+        opacity: 0;
+        transition:opacity ease-out 250ms;
+        -webkit-transition:opacity ease-out 250ms;
+        -moz-transition:opacity ease-out 250ms;
+        -ms-transition:opacity ease-out 250ms;
+        -o-transition:opacity ease-out 250ms;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
 
         span {
           @include primary-title($header5, $text-color-contrast);
           display: block;
         }
 
-        &:nth-of-type(odd) {
+        /* &:nth-of-type(odd) {
           text-align: right;
           justify-self: end;
-        }
+        } */
       }
   }
 
@@ -120,12 +151,16 @@
 
     &__photos {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(8, 1fr);
+      grid-template-rows: repeat(4, 1fr);
 
-      &__img  {
-        height: 200px;
+      &__text {
+        height: 40%;
       }
-      .first {
+
+      /* &__img  {
+        height: 200px;
+      } */
+      /* .first {
         grid-row: 1/2;
       }
       .second {
@@ -136,15 +171,18 @@
       }
       .fourth {
         grid-row: 7/8;
-      }
+      } */
     }
 
   }
 
   @include medium-screen {
     &__photos {
-      &__img {
+      /* &__img {
         height: 300px;
+      } */
+      &__text {
+        height: 40%;
       }
     }
   }
